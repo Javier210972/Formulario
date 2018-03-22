@@ -26,13 +26,13 @@ public class Tv {
     }
 
     public String encendido() {
-        if (estado.equals("encendido esta en el canal: 1")) {
+        if (estado.equals("La Tv esta encendida")) {
             this.estado = "apagado, encienda la Tv";
 
-            this.nocanal = 1;
+            this.nocanal = this.nocanal+0;
 
         } else {
-            this.estado = "encendido esta en el canal: 1";
+            this.estado = "La Tv esta encendida";
 
         }
         return this.estado;
@@ -40,7 +40,7 @@ public class Tv {
 
     public int getnocanalS() {
 
-        if (estado.equals("encendido esta en el canal: 1")) {
+        if (estado.equals("La Tv esta encendida")) {
 
             this.nocanal = this.nocanal + 1;
 
@@ -50,7 +50,7 @@ public class Tv {
             }
 
         } else if (estado.equals("apagado, encienda la Tv")) {
-            this.nocanal = 1;
+            this.nocanal = this.nocanal+0;
         }
         return nocanal;
     }
@@ -66,7 +66,7 @@ public class Tv {
 
     public int getnocanalR() {
 
-        if (estado.equals("encendido esta en el canal: 1")) {
+        if (estado.equals("La Tv esta encendida")) {
             if (this.nocanal == 0) {
 
                 this.nocanal = 5;
@@ -79,13 +79,13 @@ public class Tv {
             this.nocanal = this.nocanal - 1;
 
         } else if (estado.equals("apagado, encienda la Tv")) {
-            this.nocanal = 1;
+            this.nocanal = this.nocanal+0;
         }
         return nocanal;
     }
     
     public int getVolumencanalS() {
-        if (estado.equals("encendido esta en el canal: 1")) {
+        if (estado.equals("La Tv esta encendida")) {
              if (this.volumencanal==25) 
             {
               this.volumencanal=25;
@@ -103,12 +103,12 @@ public class Tv {
         }
        
          else if (estado.equals("apagado, encienda la Tv")) {
-           this.volumencanal=10;
+           this.volumencanal=this.volumencanal+0;
         }
         return volumencanal;
     }
     public int getVolumencanalB() {
-        if (estado.equals("encendido esta en el canal: 1")) {
+        if (estado.equals("La Tv esta encendida")) {
              if (this.volumencanal==1) 
             {
               this.volumencanal=1;
@@ -126,7 +126,7 @@ public class Tv {
         }
        
          else if (estado.equals("apagado, encienda la Tv")) {
-           this.volumencanal=10;
+           this.volumencanal=this.volumencanal+0;
         }
         return volumencanal;
     }
